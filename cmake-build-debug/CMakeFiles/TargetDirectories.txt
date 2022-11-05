@@ -1,0 +1,3 @@
+C:/projetoaed-master/cmake-build-debug/CMakeFiles/AED_Project.dir
+C:/projetoaed-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/projetoaed-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
