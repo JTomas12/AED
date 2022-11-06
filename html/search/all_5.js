@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['pedido_0',['Pedido',['../class_pedido.html',1,'Pedido'],['../class_pedido.html#a58af6ab316d543326d45bc6f46d748af',1,'Pedido::Pedido()']]],
-  ['print_1',['print',['../class_aula.html#a517712a86566631e56a8f945badc3f6f',1,'Aula::print()'],['../class_estudante.html#af44fb9ec550e11453e3288fc4eee20c8',1,'Estudante::print()'],['../class_pedido.html#a3e6136e9b5e5f9fdc52332dbc477d99d',1,'Pedido::print()'],['../class_u_c_turma.html#ab9a80dcd1f119ebea462065e3d9a234d',1,'UCTurma::print()']]],
-  ['processarpedido_2',['processarPedido',['../class_gestao_horarios.html#af6a772473bdfc7b6519e8cad5d3be286',1,'GestaoHorarios']]]
+  ['operator_3c_0',['operator&lt;',['../class_aula.html#ac13d16a560cd7862491c5c28cc5a8c15',1,'Aula::operator&lt;()'],['../class_estudante.html#a11fefda0b3aef9033af3058b6bf89f4a',1,'Estudante::operator&lt;(const Estudante &amp;aluno) const']]],
+  ['operator_3d_3d_1',['operator==',['../class_estudante.html#aebd251f276537a46e09fffe86198f7e2',1,'Estudante::operator==(const Estudante &amp;aluno) const'],['../class_estudante.html#af32fdd56cd4bb66afa54068931737959',1,'Estudante::operator==(int x) const'],['../class_u_c_turma.html#a92a29fa35f1b3ccf7c16348ecd111815',1,'UCTurma::operator==()']]],
+  ['output_2',['output',['../class_gestao_horarios.html#a62dad09629dba95d6aac1c610afac62f',1,'GestaoHorarios']]],
+  ['outputfails_3',['outputFails',['../class_gestao_horarios.html#ad746f464e079a52c4eee69a8236c04b5',1,'GestaoHorarios']]],
+  ['outputsucessos_4',['outputSucessos',['../class_gestao_horarios.html#a3dc47fe7054d1365e994d94031f4d884',1,'GestaoHorarios']]]
 ];

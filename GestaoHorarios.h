@@ -23,84 +23,102 @@ class GestaoHorarios {
 public:
     /**
      * @brief Um construtor default que invoca todos os métodos do tipo Read quando chamado
-     * Complexidade-O (6n²)
+     * @brief Complexidade-O (6n²)
      */
     GestaoHorarios();
     /**
      * @brief A partir de um ficheiro escolhido( Classes.csv), armazena todas as aulas possíveis no curso de L.EIC, bem como organiza as suas caractísticas
+     * @brief Complexidade-O (2n²)
      */
-    void readAulas();//! Complexidade-O (2n²)
+    void readAulas();
     /**
-    * @brief A partir de um ficheiro escolhido( students_classes.csv), armazena todas os estudantes inscritos no curso de L.EIC,
-    e armazena em cada estudante todas as turmas em que está inscrito
+    * @brief A partir de um ficheiro escolhido( students_classes.csv), armazena todas os estudantes inscritos no curso de L.EIC, e armazena em cada estudante todas as turmas em que está inscrito.
+    * @brief Complexidade-O (2n²)
     */
-    void readEstudantes();//! Complexidade-O (2n²)
+    void readEstudantes();
     /**
-     * Complexidade- O(n²)
+    * @brief Abre e imprime num ficheiro a lista de todos os pedidos mal-sucedidos, após estes tiverem sido processados
+    * @brief Complexidade- O(n)
+    */
+    void outputFails()const;
+    /**
+     * @brief Obtêm a lista de todos os estudantes inscritos no curso de L.EIC
+     * @brief Complexidade- O(1)
+     * @return estudantes
+     */
+    vector<Estudante> getEstudantes() const;
+    /**
+     * @brief Obtêm a lista de todas as Turmas e cadeiras respetivas no curso
+     * @brief Complexidade- O(1)
+     * @return horario
+     */
+    vector<UCTurma> getUCTurmas() const;
+    /**
+     * @brief Obtêm a lista dos códigos de todas as cadeiras do curso
+     * @brief Complexidade- O(1)
+     * @return codes
+     */
+    vector<string> getCodes() const;
+    /**
+    * @brief Obtêm a lista de todas as turmas existentes do curso de L.EIC
+    * @brief Complexidade- O(1)
+    * @return turmas
+    */
+    vector<string> getTurmas() const;
+    /**
+    * @brief Obtêm a fila de todos os pedidos feitos por estudantes do curso de L.EIC
+    * @brief Complexidade- O(1)
+    * @return pedidos
+    */
+    queue<Pedido> getPedidos() const;
+    /**
+    * @brief De todos os pedidos realizados por estudantes do curso de L.EIC, obtêm o conjunto de todos os qeu foram concedidos
+    * @brief Complexidade- O(1)
+    * @return sucesso
+    */
+    vector<Pedido> getSuccessos() const {return sucesso;};
+    /**
+    * @brief De todos os pedidos realizados por estudantes do curso de L.EIC, obtêm o conjunto de todos os que falharam
+    * @brief Complexidade- O(1)
+    * @return fail
+    */
+    vector<Pedido> getFails() const {return fail;};
+    /**
+    * @brief Abre e imprime num ficheiro a lista de todos os pedidos que tiveram sucesso, após estes tiverem sido processados
+    * @brief Complexidade- O(n)
+    */
+    void outputSucessos() const;
+
+    /**
     * @brief A partir de um ficheiro escolhido( students_classes.csv), armazena todas os códigos de todas as cadeiras existentes no curso de L.EIC
+    * Complexidade- O(n²)
     */
     void readCodes();
     /**
-     *  Complexidade- O(n²)
-    * @brief A partir de um ficheiro escolhido( students_classes.csv), armazena todas os códigos de todas as turmas existentes no curso de L.EIC
+    * @brief A partir de um ficheiro escolhido( students_classes.csv), armazena todas os códigos de todas as turmas existentes no curso de L.EIC.
+    *  Complexidade- O(n²)
     */
     void readTurmas();
 
     /**
     * @brief Adiciona um pedido x feito por um estudante
+    * @brief Complexidade- O(1)
     * @param x
     */
-    void addPedido(const Pedido& x);//! Complexidade- O(1)
+    void addPedido(const Pedido& x);
     /**
     * @brief Processa sucessivamente todos os pedidos feitos até esta chamada, separando em vetores os pedidos que tiveram sucesso, e os que falharam
+    * @brief Complexidade- O(n²)
     * @param x
     */
-    //! Complexidade- O(n²)
     void processarPedido();
     /**
      * @brief Replica uma listagem de todos os estudantes, com todas as suas turmas correspondentes
+     * @brief Complexidade- O(1)
      */
-    void output() const; //! Complexidade- O(1) /
-    /**
-     * @brief Escreve num ficheiro a descrição de cada pedido feito por estudantes que tenha falhado, identificado o estudante respetivo.
-     */
-    void outputFails()const; //! Complexidade- O(1) /
-    /**
-     * @brief Obtêm a lista de todos os estudantes inscritos no curso de L.EIC
-     * @return estudantes
-     */
-    vector<Estudante> getEstudantes() const;//! Complexidade - O(1) /
-    /**
-     * @brief Obtêm a lista de todas as Turmas e cadeiras respetivas no curso
-     * @return horario
-     */
-    vector<UCTurma> getUCTurmas() const;//! Complexidade - O(1) /
-    /**
-     * @brief Obtêm a lista dos códigos de todas as cadeiras do curso
-     * @return codes
-     */
-    vector<string> getCodes() const;//! Complexidade - O(1)
-    /**
-    * @brief Obtêm a lista de todas as turmas existentes do curso de L.EIC
-    * @return turmas
-    */
-    vector<string> getTurmas() const;//! Complexidade - O(1) /
-    /**
-    * @brief Obtêm a fila de todos os pedidos feitos por estudantes do curso de L.EIC
-    * @return pedidos
-    */
-    queue<Pedido> getPedidos() const;//! Complexidade - O(1) /
-    /**
-    * @brief De todos os pedidos realizados por estudantes do curso de L.EIC, obtêm o conjunto de todos os qeu foram concedidos
-    * @return sucesso
-    */
-    vector<Pedido> getSuccessos() const {return sucesso;};//! Complexidade - O(1) /
-    /**
-    * @brief De todos os pedidos realizados por estudantes do curso de L.EIC, obtêm o conjunto de todos os que falharam
-    * @return fail
-    */
-    vector<Pedido> getFails() const {return fail;};//! Complexidade - O(1) /
-    void outputSucessos() const;
+    void output() const;
+
+
 private:
     vector<Estudante> estudantes;/*! Conjunto de estudantes */
     vector<UCTurma> horario;/*! Conjunto de disciplinas e turmas */
